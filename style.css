@@ -17,6 +17,10 @@ body {
 	background-blend-mode: darken;
 }
 
+body a{
+	cursor:pointer;
+}
+
 .container {
 	background-color: #fff;
 	width: 900px;

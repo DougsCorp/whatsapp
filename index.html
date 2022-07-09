@@ -3,17 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <link rel="stylesheet" href="style.css">
   <title>Compartilhe no Whats...</title>
+  <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1311666139639890');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1311666139639890&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body> 
   <div class="container">
     <div class="faixa">
       <div class="imgs">
-        <a href="https://api.whatsapp.com/send?phone=5527992980465&text=Ol%C3%A1!%20Quero%20saber%20como%20funciona...">
+        <a onclick="Evento()">
           <img class="logo" src="2b.png">
         </a>
-        <a href="https://api.whatsapp.com/send?phone=5527992980465&text=Ol%C3%A1!%20Quero%20saber%20como%20funciona...">
+        <a onclick="Evento()">
           <img class="menu" src="1b.png">
         </a>
     <!-- <p><span class="number" id="iD1">97</span> Pessoas assistindo nesse momento...</p> -->
@@ -22,11 +40,11 @@
     <div class="black">
       <img src="foto.png"><br>
       <h1>Lucas Sousa</h1><br>
-      <a href="https://api.whatsapp.com/send?phone=5527992980465&text=Ol%C3%A1!%20Quero%20saber%20como%20funciona..." class="myButton">Iniciar conversa</a><br>
+      <a onclick="Evento()" class="myButton">Iniciar conversa</a><br>
       <p class="mensagem">Olá, Quero saber como funciona...</p><br>
       <div></div>
       <p>Ainda não tem o WhatsApp?</p>
-      <a class="down" href="https://api.whatsapp.com/send?phone=5527992980465&text=Ol%C3%A1!%20Quero%20saber%20como%20funciona...">Download</a>
+      <a class="down" onclick="Evento()">Download</a>
     </div>
   </div>
     <div class="footer">
@@ -35,5 +53,12 @@
         <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.  Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas e resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais fazemos nenhum tipo de spam. Sinta-se à vontade para falar conosco. Lemos e respondemos todas as mensagens por ordem de chegada.</p>
   </div>
   <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript">
+    function Evento(){
+      //console.log("Entrou no script");
+      fbq('track', 'FoiProWhats');
+      window.location.href = "https://api.whatsapp.com/send?phone=5527992980465&text=Ol%C3%A1!%20Quero%20saber%20como%20funciona...";
+    };
+  </script>
 </body>
 </html>
